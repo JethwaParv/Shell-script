@@ -69,7 +69,7 @@ ls -l file-name
 # To change both the user owner and the group owner:
 
 
-sudo chown janice:staff file-name
+sudo chown parveen:staff file-name
 
 # Password:   (give your administrator password here)
 
