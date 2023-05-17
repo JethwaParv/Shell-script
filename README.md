@@ -6,7 +6,6 @@ write a shell script that changes the permissions of all the objects in a folder
 # = chmod - chgrp chown - Modifying Permissions =
 # ===============================================
  
-
 # 'chmod' changes file permissions (change modes) by specifying permissions for the user owner, the group owner, and all others.
 # A single letter mnemonic is used to represent each class of user, and each class of permission.
 
@@ -75,3 +74,16 @@ sudo chown janice:staff file-name
 # Password:   (give your administrator password here)
 
 ls -l file-name
+
+# write a shell script that uses does the following with apt:
+# Uninstall all unused dependencies
+!/usr/bin/env bash
+zypper packages --unneeded | awk 'NR>4{print $7}' | sudo xargs zypper remove --clean-deps
+
+# write a shell script that uses does the following with apt 
+# Updates the software database
+sudo apt -y install sysbench
+
+# write a shell script that uses does the following with apt Updates the entire system
+sudo apt-get update
+
